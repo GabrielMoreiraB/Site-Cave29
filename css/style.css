@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=ZCOOL+XiaoWei&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* font-family: 'Cookie', cursive; */
-/* font-family: 'ZCOOL XiaoWei', sans-serif; */
-/* font-family: 'Poppins', sans-serif; */
-
 :root{
     --vinho : #822726;
     --branco: #ffffff;
@@ -32,7 +28,6 @@
 
 
 .cabecalho-img{
-    align-items: end;
     grid-column: 1/3;
     grid-row: 1/2;
     margin: 0 auto;
@@ -41,7 +36,6 @@
 
 .cabecalho-img > img{
     width: 75px;
-    
 }
 
 .cabecalho-insta{
@@ -51,7 +45,10 @@
     justify-content: flex-end;
     padding: 0.5em;
     font-size: 2em;
-    color: var(--vinho);
+    color: var(--vinho); 
+}
+
+.cabecalho-insta > i{
     cursor: pointer;
 }
 
@@ -73,4 +70,55 @@
     font-weight: 600;
     border: 1px solid var(--branco);
     cursor: pointer;
+}
+
+@media (min-width: 720px){
+    .cabecalho{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    }
+
+    .cabecalho-insta{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-content: center;
+    }
+    .cabecalho-img{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    }
+    .cabecalho-pedido{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-content: center;
+    }
+
+}
+
+/* banner */
+
+.banner{
+    background-image: url(bannerBarril.jpg);
+    height: 50vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-titulo{
+    font-family: var(--font-Zcool);
+    color: var(--vinho);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.banner-texto{
+    font-size: 1em;
+    font-weight: 300;
 }
