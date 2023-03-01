@@ -5,6 +5,7 @@
     --vinho : #822726;
     --branco: #ffffff;
     --preto: #000000;
+    --bege-claro:hsl(210, 10%, 92%);
     --font-coolie: 'Cookie', cursive;
     --font-Zcool : 'ZCOOL XiaoWei', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
@@ -114,11 +115,160 @@
 .banner-titulo{
     font-family: var(--font-Zcool);
     color: var(--vinho);
-    font-size: 3em;
+    font-size: 6em;
     font-weight: bold;
 }
 
 .banner-texto{
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 300;
+}
+
+/* Cards */
+
+.cards{
+    display: flex;
+    margin-top: -3em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    
+}
+
+.card{
+    background-color: var(--bege-claro);
+    color: var(--vinho);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    width: 60vw;
+    box-shadow: 0 5px 5px rgba(255, 255, 255, 0.551);
+    gap: 1em;
+    
+    
+}
+
+.card-icon {
+    font-size: 2.5em;
+}
+
+.card-title{
+    font-size: 2em;
+    font-family: var(--font-Zcool);
+}
+
+.card-text{
+    text-align: center;
+}
+
+@media (min-width: 720px){
+    .cards{
+        flex-direction: row;
+    }
+    .card{
+        width: 25vw;
+    }
+}
+
+.history{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3em 0;
+}
+
+.history-conteudo{
+    text-align: center;
+    width: 65vw;
+    color: var(--vinho);
+}
+
+.history-img{
+    width: 65vw;
+    
+}
+
+.title-conteudo{
+    font-family: var(--font-coolie);
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.under-title{
+     width: 10em;
+    height: 0.35em;
+    background: rgb(130,39,38);
+background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgba(130,39,38,1) 100%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+
+
+
+@media (min-width: 720px){
+    .history{
+        flex-direction: row;
+    }
+
+    .history-img, .history-conteudo{
+         width: 38vw;
+    }
+}
+
+.banner-fixed{
+    height: 20vw;
+    background-image: url(bannerBarril.jpg);
+    background-position: left center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-shadow: 1px 1px 0px black;
+    margin-bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-banner{
+    font-family: var(--font-coolie);
+    color: var(--branco);
+    font-size: 1.5em;
+    max-width: 80vw;
+    text-align: center;
+    
+}
+
+@media (min-width: 720px){
+    .text-banner{
+        font-size: 3em;
+    }
+}
+
+/* Carta */
+
+.carta{
+    margin-top: 2em;
+}
+
+.title-carta{
+    font-family: var(--font-coolie);
+    font-size: 2em;
+    text-align: center;
+}
+
+.under-title-carta{
+    width: 6em;
+   height: 0.35em;
+   background: rgb(130,39,38);
+background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgba(130,39,38,1) 100%);
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 2em;
 }
