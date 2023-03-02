@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=ZCOOL+XiaoWei&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+
 :root{
     --vinho : #822726;
     --branco: #ffffff;
@@ -16,6 +18,10 @@
 *{
     box-sizing: border-box;
     font-family: var(--font-poppins);
+}
+
+#hidden{
+    display: none !important;
 }
 
 .cabecalho{
@@ -288,21 +294,22 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     justify-content: center;
     flex-wrap: wrap;
 }
-.card{
+.cardP{
     width: 80vw;
+    height: 70vh;
     border-radius: 5%;
     color: var(--preto);
     background-color:transparent;
     border: 1px solid var(--vinho);
     transition: .5s;
+    margin-bottom: 2em;
 }
-
-.card:hover{
+.card-front:hover{
     padding: 5px;
 }
 
 .card-info{
-    padding: 10px;
+    padding: 1em;
 }
 
 .card-name{
@@ -325,8 +332,49 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     text-align: center;
 }
 
+.card-back{
+    width: 80vw;
+    height: 70vh;
+    padding: 1em;
+    background-image: url(../img/produtos/item-1.png);
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-back-space{
+    width: 100%;
+    height: 93%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: repeat(4, 20%);
+    column-gap: .5em;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.car-back > .card-name{
+    grid-column: 1/3;
+}
+
+.inner-back{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5em;
+}
+
+
 @media (min-width: 720px){
-    .card{
-        width: 30vw;
+    .cardP{
+        width: 25vw;
+    }
+    .card-back{
+        width: 25vw;
+        row-gap: 4em;
+        column-gap: 2em;
+    }
+
+    .card-back-space{
+        height: 96%;
     }
 }
