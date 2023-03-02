@@ -6,6 +6,7 @@
     --branco: #ffffff;
     --preto: #000000;
     --bege-claro:hsl(210, 10%, 92%);
+    --cinza-claro: #F7F7F7;
     --font-coolie: 'Cookie', cursive;
     --font-Zcool : 'ZCOOL XiaoWei', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
@@ -184,9 +185,15 @@
 }
 
 .history-conteudo{
+    /* mexer nisso para mobile */
+    padding-top: 20vh;
     text-align: center;
     width: 65vw;
+    height: 60vh;
     color: var(--vinho);
+    background-image: url(../img/fundo.png);
+    background-position: left bottom;
+    background-size: cover;
 }
 
 .history-img{
@@ -272,4 +279,54 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
    margin-left: auto;
    margin-right: auto;
    margin-bottom: 2em;
+}
+
+/* card */
+.card-space{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 80vw;
+    border-radius: 5%;
+    color: var(--preto);
+    background-color:transparent;
+    border: 1px solid var(--vinho);
+    transition: .5s;
+}
+
+.card:hover{
+    padding: 5px;
+}
+
+.card-info{
+    padding: 10px;
+}
+
+.card-name{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.card-front > img{
+    width: 100%;
+}
+
+.card-info1, .card-info2{
+    display: inline-block;
+    padding: .5em 0 1em;
+    font-weight: 600;
+}
+
+.card-history{
+    color: grey;
+    text-align: center;
+}
+
+@media (min-width: 720px){
+    .card{
+        width: 30vw;
+    }
 }
