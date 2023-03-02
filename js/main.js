@@ -7,10 +7,11 @@ const produtos = [
         tipo:"Tinto",
         uva:"Blend",
         Olfativo: "Parte do vinho passa 3 meses em carvalho francês.",
-        temperaturaserv: "14°C a 16°C",
+        tempeservi: "14°C a 16°C",
         comovejo:"Equilibrado, Frutado",
         teor:"13%",
         harmonizacao: "Harmonize com carnes vermelhas, massas e risotos.",
+        vinicola: "Buffon"
     },
     {
         id:2,
@@ -24,6 +25,7 @@ const produtos = [
         comovejo:"Doce, Equilibrado, Fresco, Leve",
         teor:"10%",
         harmonizacao:"Culinária asiática, salada de frutas e sobremesas à base de cremes.",
+        vinicola: "Buffon"
     },
     {
         id:2,
@@ -37,5 +39,21 @@ const produtos = [
         comovejo:"Doce, Equilibrado, Fresco, Leve",
         teor:"10%",
         harmonizacao:"Culinária asiática, salada de frutas e sobremesas à base de cremes.",
+        vinicola: "Buffon"
     }
 ]
+
+const cardFront = document.querySelector('.card-front');
+const cardBack = document.querySelector('.card-back');
+const btnTrocaF = document.querySelector('.btn-troca');
+const btnTrocaB = document.querySelector('.btn-trocaB');
+
+btnTrocaF.addEventListener('click',function(){
+    cardFront.classList.toggle('hidden');
+    cardBack.classList.toggle('hidden');
+})
+
+btnTrocaB.addEventListener('click',function(){
+    cardFront.classList.toggle('hidden');
+    cardBack.classList.toggle('hidden');
+})

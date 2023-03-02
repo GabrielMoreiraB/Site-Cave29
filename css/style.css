@@ -20,7 +20,7 @@
     font-family: var(--font-poppins);
 }
 
-#hidden{
+.hidden{
     display: none !important;
 }
 
@@ -282,9 +282,8 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
    height: 0.2em;
    background: rgb(130,39,38);
 background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgba(130,39,38,1) 100%);
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: 2em;
+   margin:0 auto 3em auto;
+
 }
 
 /* card */
@@ -304,27 +303,32 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     transition: .5s;
     margin-bottom: 2em;
 }
-.card-front:hover{
-    padding: 5px;
-}
 
 .card-info{
-    padding: 1em;
+    padding: 0.5em;
 }
 
 .card-name{
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 600;
 }
 
 .card-front > img{
     width: 100%;
+    transition: .5s;
+}
+.card-front > img:hover{
+    padding: 5px;
+}
+.cabecalho-info-front-card{
+    display: flex;
+    justify-content:space-between ;
 }
 
-.card-info1, .card-info2{
-    display: inline-block;
-    padding: .5em 0 1em;
-    font-weight: 600;
+.card-info-cabecalho{
+    padding: 0;
+    display: flex;
+    flex-direction:row;
 }
 
 .card-history{
@@ -363,6 +367,23 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     gap: .5em;
 }
 
+.title-inner-back{
+    font-weight: 500;
+}
+
+.btn-troca{
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--vinho);
+    border-radius: 50%;
+    color: var(--vinho);
+    cursor: pointer;
+}
+
+.cabecalho-card-back{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 @media (min-width: 720px){
     .cardP{
@@ -377,4 +398,5 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     .card-back-space{
         height: 96%;
     }
+
 }
