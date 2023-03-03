@@ -302,6 +302,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     border: 1px solid var(--vinho);
     transition: .5s;
     margin-bottom: 2em;
+    box-shadow: 1px 3px 5px rgba(130, 40, 38, 0.5);
 }
 
 .card-info{
@@ -368,7 +369,12 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 }
 
 .title-inner-back{
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.value-inner-back{
+    color: gray;
 }
 
 .btn-troca{
