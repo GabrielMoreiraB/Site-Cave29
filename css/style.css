@@ -295,7 +295,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 }
 .cardP{
     width: 80vw;
-    height: 70vh;
+    height: 73vh;
     border-radius: 5%;
     color: var(--preto);
     background-color:transparent;
@@ -309,7 +309,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     padding: 0.5em;
 }
 
-.card-name{
+.card-name, .valor-front{
     font-size: 1.3em;
     font-weight: 600;
 }
@@ -321,15 +321,54 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 .card-front > img:hover{
     padding: 5px;
 }
-.cabecalho-info-front-card{
+
+.card-front-info-valor{
     display: flex;
-    justify-content:space-between ;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+
+.card-info-cabecalho > div > img, .card-info-cabecalho > img{
+    margin: 0 10px;
+}
+
+.card-info-cabecalho > div{
+    border-right: solid 1px black;
+}
+
+.valor-front{
+    background-color: #82282694;
+    border-radius: 10px;
+    color: var(--branco);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+}
+
+.valor-front:hover{
+    background-color: #822726;
+}
+
+.bola{
+    padding: 5px;
+    margin-right:10px ;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--branco);
+
 }
 
 .card-info-cabecalho{
     padding: 0;
     display: flex;
     flex-direction:row;
+}
+
+.card-info-cabecalho > div{
+    padding:0 1em;
 }
 
 .card-history{

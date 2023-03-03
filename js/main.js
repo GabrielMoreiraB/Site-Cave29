@@ -57,3 +57,17 @@ btnTrocaB.addEventListener('click',function(){
     cardFront.classList.toggle('hidden');
     cardBack.classList.toggle('hidden');
 })
+
+
+const espacoCards = document.querySelector('.card-space');
+
+function mostraVinhos(vinhos){
+    espacoCards.innerHTML = " ";
+    vinhos.forEach(element => {
+        espacoCards.innerHTML += ``
+    });
+}
+
+
+
+mostraVinhos(produtos)
