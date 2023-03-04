@@ -92,10 +92,12 @@ function mostraVinhos(produtos){
                         <div class="card-info-cabecalho">
                             <div >
                                 <img src="img/produtos/icons/barril.png" alt=""><span>${vinhos.vinicola}</span>
-                                </div>
+                            </div>
+                            <section >
                                 <img src="img/produtos/icons/001-grapes.png" alt="">
                                 <span>${vinhos.uva}</span>
-                            </div>
+                            </section>
+                        </div>
                         </div>
                         <p class="card-history">${vinhos.historia}</p>
                         <div class="card-front-info-valor">
@@ -138,11 +140,12 @@ function mostraVinhos(produtos){
                             <div class="value-inner-back">${vinhos.tempeservi}</div>
                         </div>
                     </div>
+
                     <div class="inner-back">
-                        <img src="img/produtos/icons/006-garfo.png" alt="">
+                        <img src="img/produtos/icons/004-pingo-dagua.png" alt="">
                         <div class="card-back-info">
-                            <h4 class="title-inner-back">Harmoni<span>zação</span></h4>
-                            <div class="value-inner-back">${vinhos.harmonizacao}</div>
+                            <h4 class="title-inner-back">Teor</h4>
+                            <div class="value-inner-back">${vinhos.teor}</div>
                         </div>
                     </div>
                     <div class="inner-back">
@@ -153,18 +156,18 @@ function mostraVinhos(produtos){
                         </div>
                     </div>
                     
-                    <div class="inner-back">
+                    <div class="inner-back olfativo">
                         <img src="img/produtos/icons/002-nariz.png" alt="">
                         <div class="card-back-info">
                             <h4 class="title-inner-back">Olfativo</h4>
                             <div class="value-inner-back">${vinhos.Olfativo}</div>
                         </div>
                     </div>
-                    <div class="inner-back">
-                        <img src="img/produtos/icons/004-pingo-dagua.png" alt="">
+                    <div class="inner-back harmonizacao">
+                        <img src="img/produtos/icons/006-garfo.png" alt="">
                         <div class="card-back-info">
-                            <h4 class="title-inner-back">Teor</h4>
-                            <div class="value-inner-back">${vinhos.teor}</div>
+                            <h4 class="title-inner-back">Harmoni<span>zação</span></h4>
+                            <div class="value-inner-back">${vinhos.harmonizacao}</div>
                         </div>
                     </div>
                 </div>
