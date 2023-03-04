@@ -2,7 +2,7 @@ const produtos = [
     {
         id:1,
         nome:"Erminia Perini Blend 2020 750 mL",
-        imagem:"./img/produtos/item-1.png",
+        imagem:'./img/produtos/item-1.png',
         historia:"Inspirado em uma personalidade da família, o rótulo Erminia Perini traz um Blend de Merlot e Cabernet Sauvignon agradável para todos os dias!",
         tipo:"Tinto",
         uva:"Blend",
@@ -30,7 +30,7 @@ const produtos = [
         preco: 89.90,
     },
     {
-        id:2,
+        id:3,
         nome:"Espumante Victoria Geisse Extra Brut Vintage Rose",
         imagem:"./img/produtos/item-3.png",
         historia:"Com coloração cereja claro, este espumante rosé traz boa formação de espuma em taça, assim como excelente perlage.",
@@ -46,31 +46,34 @@ const produtos = [
     }
 ]
 
-/*const cardFront = document.querySelector('.card-front');
-const cardBack = document.querySelector('.card-back');
-const btnTrocaF = document.querySelector('.btn-troca');
-const btnTrocaB = document.querySelector('.btn-trocaB');
-
-btnTrocaF.addEventListener('click',function(){
-    cardFront.classList.toggle('hidden');
-    cardBack.classList.toggle('hidden');
-})
-
-btnTrocaB.addEventListener('click',function(){
-    cardFront.classList.toggle('hidden');
-    cardBack.classList.toggle('hidden');
-})*/
-
 window.addEventListener('DOMContentLoaded',function(){
     mostraVinhos(produtos);
 
-    const btnsTrocaF = document.querySelectorAll('.btn-trocaF')
-    const btnsTrocaB = document.querySelectorAll('.btn-trocaB');
+    const btnsTrocaF = document.querySelectorAll('.btn-trocaF');
+    let btnsTrocaB = document.querySelectorAll('.btn-trocaB');
 
-    console.log(btnsTrocaF)
+    btnsTrocaF.forEach(btn => btn.addEventListener('click',troca))
+
+    btnsTrocaB.forEach(btn => btn.addEventListener('click',troca))
+
+    
+    
 })
 
+function troca(){
+    const elementoBtn = document.getElementById(this.id);
+    const eltManipula = elementoBtn.parentNode.parentNode.parentNode.parentNode;
 
+    const front = eltManipula.querySelector('.card-front');
+    const back = eltManipula.querySelector('.card-back');
+
+    //console.log(produtos[this.id - 1].imagem);
+    back.style.backgroundImage = `url(${produtos[this.id - 1].imagem})`;
+
+    front.classList.toggle('hidden');
+    back.classList.toggle('hidden');
+    
+}
 
 
 
@@ -87,12 +90,16 @@ function mostraVinhos(produtos){
                     <h2 class="card-name">${vinhos.nome}</h2>
                     <div class="card-info">
                         <div class="card-info-cabecalho">
-                            <div ><img src="img/produtos/icons/barril.png" alt=""><span>${vinhos.vinicola}</span></div>
-                            <img src="img/produtos/icons/001-grapes.png" alt=""><span>${vinhos.uva}</span></div>
+                            <div >
+                                <img src="img/produtos/icons/barril.png" alt=""><span>${vinhos.vinicola}</span>
+                                </div>
+                                <img src="img/produtos/icons/001-grapes.png" alt="">
+                                <span>${vinhos.uva}</span>
+                            </div>
                         </div>
                         <p class="card-history">${vinhos.historia}</p>
                         <div class="card-front-info-valor">
-                            <button class="btn-troca btn-trocaF" id="${vinhos.id}><img src="img/produtos/icons/info.png" alt=""></button>
+                            <button class="btn-troca btn-trocaF" id="${vinhos.id}"><img src="img/produtos/icons/info.png" alt=""></button>
                             <div class="valor-front"><div class="bola"></div><h2>R$${vinhos.preco}</h2></div>
                         </div>
                 </div>

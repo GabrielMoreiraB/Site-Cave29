@@ -380,7 +380,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     width: 80vw;
     height: 70vh;
     padding: 1em;
-    background-image: url(../img/produtos/item-1.png);
+   
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
