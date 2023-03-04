@@ -11,7 +11,8 @@ const produtos = [
         comovejo:"Equilibrado, Frutado",
         teor:"13%",
         harmonizacao: "Harmonize com carnes vermelhas, massas e risotos.",
-        vinicola: "Buffon"
+        vinicola: "Buffon",
+        preco: 89.90,
     },
     {
         id:2,
@@ -25,7 +26,8 @@ const produtos = [
         comovejo:"Doce, Equilibrado, Fresco, Leve",
         teor:"10%",
         harmonizacao:"Culinária asiática, salada de frutas e sobremesas à base de cremes.",
-        vinicola: "Buffon"
+        vinicola: "Buffon",
+        preco: 89.90,
     },
     {
         id:2,
@@ -39,11 +41,12 @@ const produtos = [
         comovejo:"Doce, Equilibrado, Fresco, Leve",
         teor:"10%",
         harmonizacao:"Culinária asiática, salada de frutas e sobremesas à base de cremes.",
-        vinicola: "Buffon"
+        vinicola: "Buffon",
+        preco: 89.90,
     }
 ]
 
-const cardFront = document.querySelector('.card-front');
+/*const cardFront = document.querySelector('.card-front');
 const cardBack = document.querySelector('.card-back');
 const btnTrocaF = document.querySelector('.btn-troca');
 const btnTrocaB = document.querySelector('.btn-trocaB');
@@ -56,18 +59,113 @@ btnTrocaF.addEventListener('click',function(){
 btnTrocaB.addEventListener('click',function(){
     cardFront.classList.toggle('hidden');
     cardBack.classList.toggle('hidden');
+})*/
+
+window.addEventListener('DOMContentLoaded',function(){
+    mostraVinhos(produtos);
+
+    const btnsTrocaF = document.querySelectorAll('.btn-trocaF')
+    const btnsTrocaB = document.querySelectorAll('.btn-trocaB');
+
+    console.log(btnsTrocaF)
 })
+
+
+
 
 
 const espacoCards = document.querySelector('.card-space');
 
-function mostraVinhos(vinhos){
+function mostraVinhos(produtos){
     espacoCards.innerHTML = " ";
-    vinhos.forEach(element => {
-        espacoCards.innerHTML += ``
+    produtos.forEach(vinhos => {
+        espacoCards.innerHTML += `<div class="cardP">
+        <div class="card-inner">
+            <div class="card-front " >
+                <img src="${vinhos.imagem}" alt="">
+                <div class="card-info">
+                    <h2 class="card-name">${vinhos.nome}</h2>
+                    <div class="card-info">
+                        <div class="card-info-cabecalho">
+                            <div ><img src="img/produtos/icons/barril.png" alt=""><span>${vinhos.vinicola}</span></div>
+                            <img src="img/produtos/icons/001-grapes.png" alt=""><span>${vinhos.uva}</span></div>
+                        </div>
+                        <p class="card-history">${vinhos.historia}</p>
+                        <div class="card-front-info-valor">
+                            <button class="btn-troca btn-trocaF" id="${vinhos.id}><img src="img/produtos/icons/info.png" alt=""></button>
+                            <div class="valor-front"><div class="bola"></div><h2>R$${vinhos.preco}</h2></div>
+                        </div>
+                </div>
+            </div>
+            <div class="card-back hidden" >
+                <div class="cabecalho-card-back">
+                    <h2 class="card-name">${vinhos.nome}</h2>
+                    <button class="btn-troca btn-trocaB" id="${vinhos.id}"><img src="img/produtos/icons/info.png" alt=""></button>
+                </div>
+                <div class="card-back-space">
+                    <div class="inner-back">
+                        <img src="img/produtos/icons/001-grapes.png" alt="">
+                        <div class="card-back-info">
+                            <h4 class="title-inner-back">Uva</h4>
+                            <div class="value-inner-back">${vinhos.uva}</div>
+                        </div>
+                    </div>
+                    <div class="inner-back">
+                        <img src="img/produtos/icons/barril.png" alt="">
+                        <div class="card-back-info">
+                            <h4 class="title-inner-back">Vinícola</h4>
+                            <div class="value-inner-back">${vinhos.vinicola}</div>
+                        </div>
+                    </div>
+                    <div class="inner-back">
+                        <img src="img/produtos/icons/008-copo-de-vinho.png" alt="">
+                        <div class="card-back-info">
+                            <h4 class="title-inner-back">Tipo de vinho</h4>
+                            <div class="value-inner-back">${vinhos.tipo}</div>
+                        </div>
+                    </div>
+                    <div class="inner-back">
+                        <img src="img/produtos/icons/003-celsius.png" alt="">
+                        <div class="card-back-info">
+                            <h4 class="title-inner-back">Temp. de Serviço</h4>
+                            <div class="value-inner-back">${vinhos.tempeservi}</div>
+                        </div>
+                    </div>
+                    <div class="inner-back">
+                        <img src="img/produtos/icons/006-garfo.png" alt="">
+                        <div class="card-back-info">
+                            <h4 class="title-inner-back">Harmoni<span>zação</span></h4>
+                            <div class="value-inner-back">${vinhos.harmonizacao}</div>
+                        </div>
+                    </div>
+                    <div class="inner-back">
+                        <img src="img/produtos/icons/barril.png" alt="">
+                        <div class="card-back-info">
+                            <h4 class="title-inner-back">Como Vejo</h4>
+                            <div class="value-inner-back">${vinhos.comovejo}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="inner-back">
+                        <img src="img/produtos/icons/002-nariz.png" alt="">
+                        <div class="card-back-info">
+                            <h4 class="title-inner-back">Olfativo</h4>
+                            <div class="value-inner-back">${vinhos.Olfativo}</div>
+                        </div>
+                    </div>
+                    <div class="inner-back">
+                        <img src="img/produtos/icons/004-pingo-dagua.png" alt="">
+                        <div class="card-back-info">
+                            <h4 class="title-inner-back">Teor</h4>
+                            <div class="value-inner-back">${vinhos.teor}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`
     });
 }
 
 
 
-mostraVinhos(produtos)

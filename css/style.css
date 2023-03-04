@@ -295,7 +295,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 }
 .cardP{
     width: 80vw;
-    height: 73vh;
+    height: 75vh;
     border-radius: 5%;
     color: var(--preto);
     background-color:transparent;
