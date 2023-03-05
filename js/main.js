@@ -4,7 +4,7 @@ const produtos = [
         nome:"Erminia Perini Blend 2020 750 mL",
         imagem:'./img/produtos/item-1.png',
         historia:"Inspirado em uma personalidade da família, o rótulo Erminia Perini traz um Blend de Merlot e Cabernet Sauvignon agradável para todos os dias!",
-        tipo:"Tinto",
+        tipo:"tinto",
         uva:"Blend",
         Olfativo: "Parte do vinho passa 3 meses em carvalho francês.",
         tempeservi: "14°C a 16°C",
@@ -19,7 +19,7 @@ const produtos = [
         nome:"Espumante Victoria Geisse Moscato Rose Demi Sec 750 mL",
         imagem:"./img/produtos/item-2.png",
         historia:"Diferente dos métodos usuais para se produzir um espumante Moscato, este é feito pelo método tradional, elevando sua complexidade aromática.",
-        tipo:"Espumante",
+        tipo:"espumante",
         uva: "Moscato De Hamburgo",
         Olfativo: "Notas florais, cítrico e frutas vermelhas frescas.",
         temperaturaserv:"6°C a 8°C",
@@ -34,7 +34,7 @@ const produtos = [
         nome:"Espumante Victoria Geisse Extra Brut Vintage Rose",
         imagem:"./img/produtos/item-3.png",
         historia:"Com coloração cereja claro, este espumante rosé traz boa formação de espuma em taça, assim como excelente perlage.",
-        tipo:"Espumante",
+        tipo:"espumante",
         uva: "Moscato De Hamburgo",
         Olfativo: "Notas florais, cítrico e frutas vermelhas frescas.",
         temperaturaserv:"6°C a 8°C",
@@ -57,7 +57,11 @@ window.addEventListener('DOMContentLoaded',function(){
     btnsTrocaB.forEach(btn => btn.addEventListener('click',troca))
 
     
+    const botoesFiltro = document.querySelectorAll('.botao-filtro');
+    console.log(botoesFiltro)
+    botoesFiltro.forEach(item => item.addEventListener('click',filtroVinhos))
     
+
 })
 
 function troca(){
@@ -102,7 +106,7 @@ function mostraVinhos(produtos){
                         <p class="card-history">${vinhos.historia}</p>
                         <div class="card-front-info-valor">
                             <button class="btn-troca btn-trocaF" id="${vinhos.id}"><img src="img/produtos/icons/info.png" alt=""></button>
-                            <div class="valor-front"><div class="bola"></div><h2>R$${vinhos.preco}</h2></div>
+                            <div class="valor-front"><div class="bola"></div><h2>R$${(vinhos.preco).toFixed(2)}</h2></div>
                         </div>
                 </div>
             </div>
@@ -178,4 +182,11 @@ function mostraVinhos(produtos){
 }
 
 
-
+function filtroVinhos(){
+    const btnclicado = document.getElementById(this.id).id;
+    if(btnclicado == 'todos'){
+        return mostraVinhos(produtos);
+    }
+    let vinhosFiltrados = produtos.filter(vinhos => vinhos.tipo == btnclicado);
+    mostraVinhos(vinhosFiltrados);
+}

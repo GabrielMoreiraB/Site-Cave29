@@ -70,15 +70,22 @@
     
 }
 
-.cabecalho-pedido-btn{
+.cabecalho-pedido-btn, .botao-filtro{
     background-color: var(--vinho);
     color: var(--branco);
     padding: 0.5em 1em;
     box-shadow: 5px 5px 0px 0px rgb(237 36 51 / 30%);
     font-size: .8em;
     font-weight: 600;
-    border: 1px solid var(--branco);
+    border: 3px solid var(--branco);
     cursor: pointer;
+    transition: .5s;
+}
+
+.cabecalho-pedido-btn:hover, .botao-filtro:hover{
+    background-color: var(--branco);
+    color: var(--vinho);
+    border: 3px solid var(--vinho);
 }
 
 @media (min-width: 720px){
@@ -287,6 +294,20 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 
 }
 
+.botoes-filtro{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 3em;
+    flex-wrap: wrap;
+}
+
+.botao-filtro{
+    text-align: center;
+    width: auto;
+    font-size: 1.1em;
+}
+
 /* card */
 .card-space{
     display: flex;
@@ -294,6 +315,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     justify-content: center;
     flex-wrap: wrap;
     gap: 2em;
+    margin-bottom: 2em;
 }
 .cardP{
     width: 80vw;
@@ -454,4 +476,39 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
         height: 96%;
     }
 
+}
+
+/* footer */
+
+footer{
+    background-color:  var(--vinho);
+    display: flex;
+    color: var(--branco);
+}
+
+.footer-contato{
+    margin: 3em;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+.titulo-contato{
+    font-family: var(--font-Zcool);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.contato-num{
+    font-family: var(--font-Zcool);
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.fa-whatsapp{
+    font-size: 2em;
+    font-weight: 500;
 }
