@@ -112,6 +112,79 @@
 
 }
 
+/* Menu */
+
+.menu{
+    padding: .5em;
+}
+
+.nav-list > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-list, .nav-list-mobile  {
+    color: var(--vinho);
+    font-weight: 700;
+    font-size: 1.5em;
+    font-family: var(--font-coolie);
+}
+
+.nav-list{
+    display: none;
+}
+
+.nav-list-mobile{
+    text-align: center;
+    margin: 1em ;
+}
+
+
+
+@media (min-width: 720px){
+    .burger{
+        display: none;
+    } 
+    .nav-list{
+        display: block;
+    }
+}
+
+
+/* botao menu */
+.burger {
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    border: 0;
+    padding: 0;
+    gap: .2rem;
+    background: none;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  
+  .burger :where(.top-bread, .meat, .bottom-bread) {
+    background:var(--vinho);
+    height: 6px;
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    transition: transform 300ms ease;
+  }
+  
+  .burger[aria-expanded=true] .top-bread {
+    transform: translateY(calc(6px + .2rem)) rotate(45deg);
+  }
+  
+  .burger[aria-expanded=true] .meat {
+    transform: rotate(45deg);  
+  }
+  
+  .burger[aria-expanded=true] .bottom-bread {
+    transform: translateY(calc(-6px + -.2rem)) rotate(-45deg);
+  }
 /* banner */
 
 .banner{
@@ -306,6 +379,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     text-align: center;
     width: auto;
     font-size: 1.1em;
+    margin-bottom: 1em;
 }
 
 /* card */
@@ -340,6 +414,9 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 
 .card-front > img{
     width: 100%;
+    max-width: 300px;
+    text-align: center;
+    height: 50%;
     transition: .5s;
 }
 .card-front > img:hover{
@@ -466,6 +543,11 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     .cardP{
         width: 25vw;
     }
+
+    .card-front > img{
+        max-width: none;
+    }
+
     .card-back{
         width: 25vw;
         row-gap: 4em;
@@ -482,33 +564,61 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 
 footer{
     background-color:  var(--vinho);
-    display: flex;
     color: var(--branco);
+    margin: 0 auto;
 }
 
-.footer-contato{
-    margin: 3em;
-    width: 50vw;
+.footer-contato, .footer-localizacao{
+    width: 90vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     gap: 2em;
+    padding-bottom:1em ;
 }
 
-.titulo-contato{
+.footer-contato > h3{
+    font-family: var(--font-Zcool);
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.titulo-contato, .loc-titulo{
     font-family: var(--font-Zcool);
     font-size: 2em;
     font-weight: 500;
+    text-align: center;
 }
 
-.contato-num{
+.contato-num, .footer-localizacao > img{
     font-family: var(--font-Zcool);
     font-size: 2.2em;
     font-weight: 700;
 }
 
-.fa-whatsapp{
-    font-size: 2em;
+.cabecalho-pedido-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
     font-weight: 500;
+    gap: .5em;
+}
+
+.footer-localizacao > img{
+    width: 35px;
+    margin: 0 auto;
+}
+
+@media (min-width: 720px){
+
+    footer{
+        display: flex;
+    }
+
+    .footer-contato, .footer-localizacao{
+        margin: 3em;
+        width: 50vw;
+    }
 }

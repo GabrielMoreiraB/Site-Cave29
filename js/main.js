@@ -190,3 +190,13 @@ function filtroVinhos(){
     let vinhosFiltrados = produtos.filter(vinhos => vinhos.tipo == btnclicado);
     mostraVinhos(vinhosFiltrados);
 }
+
+
+const burgerElement = document.querySelector('.burger');
+const navListMobile = document.querySelector('.nav-list-mobile');
+
+burgerElement.addEventListener('click', () => {
+  const isExpanded = burgerElement.getAttribute('aria-expanded') === 'true'; 
+  burgerElement.setAttribute('aria-expanded', !isExpanded);
+  navListMobile.classList.toggle('hidden')
+});
