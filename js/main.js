@@ -49,12 +49,7 @@ const produtos = [
 window.addEventListener('DOMContentLoaded',function(){
     mostraVinhos(produtos);
 
-    const btnsTrocaF = document.querySelectorAll('.btn-trocaF');
-    let btnsTrocaB = document.querySelectorAll('.btn-trocaB');
-
-    btnsTrocaF.forEach(btn => btn.addEventListener('click',troca))
-
-    btnsTrocaB.forEach(btn => btn.addEventListener('click',troca))
+    eventoDeTrocar();
 
     
     const botoesFiltro = document.querySelectorAll('.botao-filtro');
@@ -63,6 +58,15 @@ window.addEventListener('DOMContentLoaded',function(){
     
 
 })
+
+function eventoDeTrocar(){
+    const btnsTrocaF = document.querySelectorAll('.btn-trocaF');
+    let btnsTrocaB = document.querySelectorAll('.btn-trocaB');
+
+    btnsTrocaF.forEach(btn => btn.addEventListener('click',troca))
+
+    btnsTrocaB.forEach(btn => btn.addEventListener('click',troca))
+}
 
 function troca(){
     const elementoBtn = document.getElementById(this.id);
@@ -185,10 +189,13 @@ function mostraVinhos(produtos){
 function filtroVinhos(){
     const btnclicado = document.getElementById(this.id).id;
     if(btnclicado == 'todos'){
-        return mostraVinhos(produtos);
+        mostraVinhos(produtos);
+        eventoDeTrocar();
+        return
     }
     let vinhosFiltrados = produtos.filter(vinhos => vinhos.tipo == btnclicado);
     mostraVinhos(vinhosFiltrados);
+    eventoDeTrocar()
 }
 
 
