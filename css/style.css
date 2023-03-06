@@ -329,13 +329,12 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     .history{
         height: 70vh;
         flex-direction: row;
-        height: 40vh;
         margin-bottom: 1em;
     }
 
     .history-img, .history-conteudo{
          width: 33vw;
-         height: 30vh;
+         height: 50vh;
     }
     
 }
@@ -565,7 +564,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 @media (min-width: 720px){
     .cardP{
         width: 25vw;
-        height: 78vh;
+        height: 80vh;
     }
 
     .card-front > img{
