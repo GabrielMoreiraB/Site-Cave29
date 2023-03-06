@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/Logo 3.png" type="image/x-icon">
     <title>CAVE29 | Home</title>
 </head>
@@ -13,40 +14,39 @@
     <header>
        <section class="cabecalho">
            <div class="cabecalho-links">
-                <button class="cabecalho-insta">
-                    <i class="fa-brands fa-instagram instagram"></i>
-                </button>
+                    <a href="https://www.instagram.com/cave29bebidas/"class="cabecalho-insta" target="_blank"><i class="fa-brands fa-instagram instagram"></i></a>
            
-                <button class="cabecalho-loc">
-                    <i class="fa-solid fa-location-dot"></i>
-                </button>
+                    <a href="https://www.google.com.br/maps/place/Cave+29+Bebidas+Especiais/@-21.1205941,-42.9519162,17z/data=!3m1!4b1!4m6!3m5!1s0xa31b3996031fbf:0x1546515af0f06748!8m2!3d-21.1205941!4d-42.9497275!16s%2Fg%2F11s0kbs6rt" class="cabecalho-loc" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+
             </div>
            <div class="cabecalho-img"><img src="img/Logo 3.png" alt=""></div>
            <div class="cabecalho-pedido">
-            <button class="cabecalho-pedido-btn">Faça Seu Pedido</button></div>
+                <a href="https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D5532999876682%26text%3DOi%252C%2Bgostaria%2Bde%2Bsaber%2Bsobre%2Bos%2Bvinhos%2Bda%2BCave%2B29%2521%25F0%259F%258D%25B7%25F0%259F%25A4%25A9%25F0%259F%25A5%2582&e=AT1FcE1pQU8xeCCvFjSczbfMnWyQSnRZJl2ugn3PRH0J-i24vxxRvxyeXBHwVKbjY0xwyIMieWY42tLalJvzwo0r0t_67AF_kVOCvj4"class="cabecalho-pedido-btn" target="_blank">Faça Seu Pedido</a>
+            </div>
        </section>
 
         <section class="menu">
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="" class="nav-link">Nossa História</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Carta de Vinhos</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Localização</a></li>
+                    <li class="nav-item"><a href="#sobre" class="nav-link">Nossa História</a></li>
+                    <li class="nav-item"><a href="#carta" class="nav-link">Carta de Vinhos</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Localização</a></li>
                 </ul>
             </div>
 
-            <button class="burger" aria-expanded="false">
-                <div class="top-bread"></div>
-                <div class="meat"></div>
-                <div class="bottom-bread"></div>
-              </button>
-
-              <div class="nav-list-mobile hidden">
-                <ul>
-                    <li class="nav-item"><a href="" class="nav-link">Nossa História</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Carta de Vinhos</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Localização</a></li>
-                </ul>
+            <div class="icon-burguer">
+                <button class="burger" aria-expanded="false">
+                    <div class="top-bread"></div>
+                    <div class="meat"></div>
+                    <div class="bottom-bread"></div>
+                  </button>
+                  <div class="nav-list-mobile hidden">
+                    <ul>
+                        <li class="nav-item"><a href="#sobre" class="nav-link">Nossa História</a></li>
+                    <li class="nav-item"><a href="#carta" class="nav-link">Carta de Vinhos</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Localização</a></li>
+                    </ul>
+            </div>
             </div>
         </section>
     </header>
@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <section class="history">
+        <section class="history" id="sobre" data-aos="fade-up">
             <div class="history-conteudo">
                 <h2 class="title-conteudo">Conheça Nossa Historia</h2>
                 <div class="under-title"></div>
@@ -88,7 +88,7 @@
             <h2 class="text-banner">“Quem sabe degustação, nunca mais bebe um vinho, mas experimenta seus segredos.”</h2>
         </section>
 
-        <section class="carta">
+        <section class="carta" id="carta">
             <div class="title-carta">
                 <h2>Nossa Carta</h2>
                 <div class="under-title-carta"></div>
@@ -107,12 +107,12 @@
         </section>
     </main>
     <footer>
-        <div class="footer-contato">
+        <div class="footer-contato" id="contato">
             <h2 class="titulo-contato">Contato</h2>
             <h1 class="contato-num"><i class="fa-solid fa-phone"></i> (32) 9 9987-6682</h1>
             <h3>Email:</h3>
             <h3>CNPJ:43.931.107/001-66 </h3>
-            <button class="cabecalho-pedido-btn"><i class="fa-brands fa-whatsapp"></i>  Faça seu pedido aqui!</button></div>
+            <a href="https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D5532999876682%26text%3DOi%252C%2Bgostaria%2Bde%2Bsaber%2Bsobre%2Bos%2Bvinhos%2Bda%2BCave%2B29%2521%25F0%259F%258D%25B7%25F0%259F%25A4%25A9%25F0%259F%25A5%2582&e=AT1FcE1pQU8xeCCvFjSczbfMnWyQSnRZJl2ugn3PRH0J-i24vxxRvxyeXBHwVKbjY0xwyIMieWY42tLalJvzwo0r0t_67AF_kVOCvj4" class="cabecalho-pedido-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i>Faça seu pedido aqui!</a> </div>
         </div>
         <div class="footer-localizacao">
             
@@ -126,5 +126,9 @@
 
     <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/4b718e6da1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

@@ -20,6 +20,10 @@
     font-family: var(--font-poppins);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .hidden{
     display: none !important;
 }
@@ -93,6 +97,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+
+    
     }
 
     .cabecalho-links{
@@ -140,10 +146,12 @@
     margin: 1em ;
 }
 
-
+.icon-burguer{
+    display: block;
+}
 
 @media (min-width: 720px){
-    .burger{
+    .icon-burguer{
         display: none;
     } 
     .nav-list{
@@ -203,13 +211,23 @@
 .banner-titulo{
     font-family: var(--font-Zcool);
     color: var(--vinho);
-    font-size: 6em;
+    font-size: 4em;
     font-weight: bold;
 }
 
 .banner-texto{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 300;
+}
+
+@media (min-width: 720px){
+    .banner-titulo{
+        font-size: 6em;
+    }
+    
+    .banner-texto{
+        font-size: 1.5em;
+    }
 }
 
 /* Cards */
@@ -263,20 +281,19 @@
 }
 
 .history{
+    height: 85vh;
     display: flex;
     align-items: center;
     gap: 2em;
     justify-content: center;
     flex-direction: column;
-    margin: 3em 0;
+    padding: 3em 0;
 }
 
 .history-conteudo{
     /* mexer nisso para mobile */
-    padding-top: 20vh;
     text-align: center;
     width: 65vw;
-    height: 60vh;
     color: var(--vinho);
     background-image: url(../img/fundo.png);
     background-position: left bottom;
@@ -285,6 +302,7 @@
 
 .history-img{
     width: 65vw;
+    height: 60vh;
     
 }
 
@@ -309,12 +327,17 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 
 @media (min-width: 720px){
     .history{
+        height: 70vh;
         flex-direction: row;
+        height: 40vh;
+        margin-bottom: 1em;
     }
 
     .history-img, .history-conteudo{
-         width: 38vw;
+         width: 33vw;
+         height: 30vh;
     }
+    
 }
 
 .banner-fixed{
@@ -348,7 +371,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 /* Carta */
 
 .carta{
-    margin-top: 2em;
+    padding-top: 2em;
 }
 
 .title-carta > h2{
@@ -601,7 +624,6 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
     font-weight: 500;
     gap: .5em;
 }
@@ -620,5 +642,10 @@ footer{
     .footer-contato, .footer-localizacao{
         margin: 3em;
         width: 50vw;
+    }
+
+    .cabecalho-pedido-btn{
+        font-size: 1.5em;
+        ;
     }
 }
