@@ -20,6 +20,7 @@ Nosso site conta com Os valores da empresa, localização e contato, uma carta d
 ![alt text](https://github.com/GabrielMoreiraB/Site-Cave29/blob/main/img/readme/mobile.png)
 
 * **Info dos vinhos! ‼** - 
+![alt text](https://github.com/GabrielMoreiraB/Site-Cave29/blob/main/img/readme/info%20prod.png)
 
 Esse projeto foi construido utilizando as seguntes ferramentas:
 
