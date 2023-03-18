@@ -414,8 +414,8 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
     margin-bottom: 2em;
 }
 .cardP{
-    width: 80vw;
-    height: 65vh;
+    width: 300px;
+    height: 550px;
     border-radius: 5%;
     color: var(--preto);
     background-color:transparent;
@@ -436,7 +436,6 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 
 .card-front > img{
     width: 100%;
-    max-width: 300px;
     text-align: center;
     height: 50%;
     transition: .5s;
@@ -508,8 +507,8 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 }
 
 .card-back{
-    width: 80vw;
-    height: 70vh;
+    width: 300px;
+    height: 550px;
     padding: 1em;
     transition: .5s;
     background-position: center center;
@@ -573,11 +572,7 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 }
 
 @media (min-width: 720px){
-    .cardP{
-        width: 25vw;
-        height: 80vh;
-    }
-
+   
     .card-back-space{
         height: 80%;
     }
@@ -608,15 +603,15 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 
 @media (min-width: 1150px){
     .cardP{
-        max-width: 500px;
-        height: 76vh;
+        width: 400px;
+        height: 600px;
     }
 }
 
 @media (min-width: 1650px){
     .cardP{
-        width: 28vw;
-        height: 83vh;
+        width: 450px;
+        height: 650px;
     }
 }
 
