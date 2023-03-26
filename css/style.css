@@ -281,8 +281,7 @@ html{
 }
 
 .history{
-    height: 85vh;
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 2em;
     justify-content: center;
@@ -291,7 +290,6 @@ html{
 }
 
 .history-conteudo{
-    /* mexer nisso para mobile */
     text-align: center;
     width: 65vw;
     color: var(--vinho);
@@ -302,7 +300,6 @@ html{
 
 .history-img{
     width: 65vw;
-    height: 60vh;
     
 }
 
@@ -327,15 +324,27 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 
 @media (min-width: 720px){
     .history{
-        height: 70vh;
-        flex-direction: row;
-        margin-bottom: 1em;
+        grid-template-columns: 2fr;
+    }
+    .history-conteudo{
+        grid-column: 1/2;
+        width: 40vw;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        flex-direction: column;
+        height: 100%;
+        margin: auto;
+    }
+    .history-img{
+        grid-column: 2/3;
+        width: 40vw;
+        max-width: 1000px;
+        display: flex;
+        align-self: center;
+        justify-self: center;
     }
 
-    .history-img, .history-conteudo{
-         width: 33vw;
-         height: 50vh;
-    }
     
 }
 
@@ -405,24 +414,30 @@ background: linear-gradient(90deg, rgba(130,39,38,1) 0%, rgba(2,0,36,1) 50%, rgb
 }
 
 /* card */
+
+
 .card-space{
+    background-color: #822726;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2em;
     margin-bottom: 2em;
+    padding-top: 2em;
+    box-shadow: 10px 10px 10px rgba(78, 15, 15, 0.5);
 }
 .cardP{
+    
     width: 300px;
     height: 550px;
     border-radius: 5%;
     color: var(--preto);
-    background-color:transparent;
+    background-color:#ffffff;
     border: 1px solid var(--vinho);
     transition: .5s;
     margin-bottom: 2em;
-    box-shadow: 1px 3px 5px rgba(130, 40, 38, 0.5);
+    box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.5);
 }
 
 .card-info{
